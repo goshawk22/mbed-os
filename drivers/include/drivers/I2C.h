@@ -168,6 +168,10 @@ public:
      */
     int write(int data);
 
+    /** Frees the i2c object, allowing us to sleeps
+     */
+    void free(void);
+
     /** Creates a start condition on the I2C bus
      */
     void start(void);
