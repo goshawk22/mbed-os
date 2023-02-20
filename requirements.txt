@@ -23,5 +23,6 @@ pywin32>=301;platform_system=='Windows'
 wmi==1.4.9;platform_system=='Windows'
 psutil==5.6.7
 cryptography>=3.2,<4
+pyopenssl<=21.0.0
 Click>=7.0,<8
 cbor>=1.0.0
