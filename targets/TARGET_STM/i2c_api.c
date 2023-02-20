@@ -447,7 +447,7 @@ void i2c_init_internal(i2c_t *obj, const i2c_pinmap_t *pinmap)
 
 #if defined(TARGET_STM32WL) || defined(TARGET_STM32WB)
         /* In Stop2 mode, I2C1 and I2C2 instances are powered down (only I2C3 register content is kept) */
-        sleep_manager_lock_deep_sleep();
+        //sleep_manager_lock_deep_sleep();
 #endif
     }
 #endif
@@ -461,7 +461,7 @@ void i2c_init_internal(i2c_t *obj, const i2c_pinmap_t *pinmap)
 
 #if defined(TARGET_STM32WL)
         /* In Stop2 mode, I2C1 and I2C2 instances are powered down (only I2C3 register content is kept) */
-        sleep_manager_lock_deep_sleep();
+        //sleep_manager_lock_deep_sleep();
 #endif
     }
 #endif
@@ -554,7 +554,7 @@ void i2c_deinit_internal(i2c_t *obj)
     if (obj_s->i2c == I2C_1) {
         __HAL_RCC_I2C1_CLK_DISABLE();
 #if defined(TARGET_STM32WL) || defined(TARGET_STM32WB)
-        sleep_manager_unlock_deep_sleep();
+        //sleep_manager_unlock_deep_sleep();
 #endif
     }
 #endif
@@ -562,7 +562,7 @@ void i2c_deinit_internal(i2c_t *obj)
     if (obj_s->i2c == I2C_2) {
         __HAL_RCC_I2C2_CLK_DISABLE();
 #if defined(TARGET_STM32WL)
-        sleep_manager_unlock_deep_sleep();
+        //sleep_manager_unlock_deep_sleep();
 #endif
     }
 #endif
