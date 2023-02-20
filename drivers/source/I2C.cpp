@@ -113,6 +113,13 @@ int I2C::read(int ack)
     return ret;
 }
 
+void I2C::free(void) 
+{
+    lock();
+    i2c_free(&_i2c);
+    unlock();
+}
+
 void I2C::start(void)
 {
     lock();
