@@ -197,7 +197,7 @@ __WEAK void hal_deepsleep(void)
     HAL_PWREx_EnableSRAM3ContentRetention();
 #endif
 
-    HAL_PWREx_EnterSTOP2Mode(PWR_STOPENTRY_WFI);
+    HAL_PWREx_EnterSTOP1Mode(PWR_STOPENTRY_WFI);
 
     if (lowPowerModeEnabled) {
         HAL_PWREx_EnableLowPowerRunMode();
